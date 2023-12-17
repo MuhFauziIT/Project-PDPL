@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f6fc;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form {
+  border-radius: 10px;
+  height: 40rem;
+  padding: 2rem;
+  width: 500px;
+  margin: 0 3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 1px rgba(132, 132, 132, 0.5);
+}
+
+#option {
+    margin-right:10px;
+}
+
+.definition {
+  width: 500px;
+}
+
+.definition p {
+  width: 100%;
+}
+.success {
+  margin-top: 10rem;
+}
+
+.form-control {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+.form-check-input {
+  box-shadow: none !important;
+  border-color: none !important;
+}
+
+.form-check-input:checked {
+  background-color: #198754 !important;
+}
+
+.form-control:focus {
+  border-bottom: 2px #198754 solid !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+.form {
+    margin:2rem 0;
+}
+}
+
+/* Medium devices (landscape hp , tablets, 768px) */
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+    margin: 3rem 0;
+  }
+}
