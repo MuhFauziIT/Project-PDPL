@@ -4,70 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="<KEY>" crossorigin="anonymous">
-    <title>BMI Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Kalkulator BMI</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/style.css">
 </head>
-
 <body>
+
     <div class="container">
-        <div class="form">
-            <form action="result.php" method="POST">
-                <div class="d-flex justify-content-center mb-3">
-                    <img src="image/gender.png" alt="" width="140" height="140">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Tinggi(cm)</label>
-                    <input type="number" class="form-control col-sm-2 col-md-3" id="exampleFormControlInput1"
-                        placeholder="1-3 digit" minlength="1" maxlength="3" name="tinggi" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Berat(kg)</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="1-3 digit"
-                        minlength="1" maxlength="3" name="berat" required>
-                </div>
-                <div class="mb-3">
-                    <label for="">Jenis Kelamin</label>
-                    <br>
-                    <input class="form-check-input" type="radio" name="jenisKelamin" id="Laki-laki" required>
-                    <label class="form-check-label" for="Laki-laki" id="option">
-                        Laki-laki
-                    </label>
-                    <input class="form-check-input" type="radio" name="jenisKelamin" id="Perempuan" required>
-                    <label class="form-check-label" for="Perempuan">
-                        Perempuan
-                    </label>
-                </div>
-                <div class="success d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-success">Cek BMI</button>
-                </div>
-            </form>
+        <div class="jumbotron">
+            <h1 class="display-4">Kalkulator BMI</h1>
+            <p class="lead">Hitung Indeks Massa Tubuh Anda dengan Mudah</p>
         </div>
-        <div class="definition">
-            <p>Body Mass Index (BMI) adalah nilai ukur untuk mengetahui status gizi seseorang berdasarkan berat dan
-                tinggi
-                badannya. Nilai BMI juga dapat menjadi alat pantauan awal untuk mengetahui risiko seseorang terhadap
-                suatu
-                penyakit.
 
-                Nilai BMI yang tinggi menandakan bahwa Anda kelebihan berat badan (overweight atau obesitas). Sementara,
-                nilai BMI yang rendah artinya Anda kekurangan gizi dan memiliki berat badan rendah.</p>
-
-            <p>
-                Menurut WHO, pengelompokkan BMI adalah sebagai berikut.<br>
-
-                <br>~ Berat badan di bawah normal jika angka BMI di bawah 18,5<br>
-                <br>~ Berat badan normal jika angka BMI di antara 18,5 – 24,9<br>
-                <br>~ Berat badan berlebih jika angka BMI di antara 25 – 29,9<br>
-                <br>~ Obesitas jika angka BMI adalah 30 atau lebih.<br>
-            </p>
+        <form action="calculate.php" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="gender-selection">
+                        <h4>Pilih Jenis Kelamin</h4>
+                        <div class="gender-container" onclick="selectGender('male')">
+                            <img src="https://i.pinimg.com/564x/33/f8/71/33f871978f930dd0c29214c7011bb378.jpg"
+                                alt="Male" class="gender-image selected" id="gender-image-male">
+                            <div class="gender-label">Laki-laki</div>
+                        </div>
+                        <div class="gender-container" onclick="selectGender('female')">
+                            <img src="https://i.pinimg.com/236x/1d/19/6c/1d196c17f2777cf4a3862533086ef8f2.jpg"
+                                alt="Female" class="gender-image not-selected" id="gender-image-female">
+                            <div class="gender-label">Perempuan</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Tinggi (cm):</label>
+                        <input type="number" class="form-control" id="height" placeholder="Masukkan tinggi Anda"
+                            name="tinggibadan" maxlength="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Berat (kg):</label>
+                        <input type="text" class="form-control" id="weight" placeholder="Masukkan berat Anda"
+                            name="beratbadan" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary" name="submit">Hitung BMI</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        <div class="col-md-6">
+            <div class="deskripsi">
+                <h4>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang
+                    menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana
+                    denganmu? Yuk, hitung sekarang di BMI Kalkulator.</h4>
+            </div>
         </div>
     </div>
-</body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"> </script>
+    </div>
+
+
+
+    <!-- Link Bootstrap JS dan Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="resource/js/script.js"></script>
+    <script src="resource/js/gender.js">
+
+    </script>
+
+
+
+</body>
 
 </html>
