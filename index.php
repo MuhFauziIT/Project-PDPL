@@ -20,19 +20,6 @@
         <form action="calculate.php" method="POST">
             <div class="row">
                 <div class="col-md-6">
-                    <div id="gender-selection">
-                        <h4>Pilih Jenis Kelamin</h4>
-                        <div class="gender-container" onclick="selectGender('male')">
-                            <img src="https://i.pinimg.com/564x/33/f8/71/33f871978f930dd0c29214c7011bb378.jpg"
-                                alt="Male" class="gender-image selected" id="gender-image-male">
-                            <div class="gender-label">Laki-laki</div>
-                        </div>
-                        <div class="gender-container" onclick="selectGender('female')">
-                            <img src="https://i.pinimg.com/236x/1d/19/6c/1d196c17f2777cf4a3862533086ef8f2.jpg"
-                                alt="Female" class="gender-image not-selected" id="gender-image-female">
-                            <div class="gender-label">Perempuan</div>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label for="height">Tinggi (cm):</label>
                         <input type="number" class="form-control" id="height" placeholder="Masukkan tinggi Anda"
@@ -51,12 +38,18 @@
                 </div>
         </form>
         <div class="col-md-6">
-            <div class="deskripsi">
-                <h4>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang
-                    menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana
-                    denganmu? Yuk, hitung sekarang di BMI Kalkulator.</h4>
+            <div id="gender-selection">
+                <h4>Pilih Jenis Kelamin</h4>
+                <div class="gender-container" onclick="selectGender('male')">
+                    <img src="https://i.pinimg.com/564x/33/f8/71/33f871978f930dd0c29214c7011bb378.jpg" alt="Male" class="gender-image selected" id="gender-image-male">
+                    <div class="gender-label">Laki-laki</div>
+                </div>
+                <div class="gender-container" onclick="selectGender('female')">
+                    <img src="https://i.pinimg.com/236x/1d/19/6c/1d196c17f2777cf4a3862533086ef8f2.jpg" alt="Female" class="gender-image not-selected" id="gender-image-female">
+                    <div class="gender-label">Perempuan</div>
+                </div>
             </div>
-        </div>
+        </div>  
     </div>
 
     </div>
