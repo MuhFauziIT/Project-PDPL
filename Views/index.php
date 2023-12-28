@@ -7,7 +7,7 @@
     <title>Kalkulator BMI</title>
     <!-- Link Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="resource/css/style.css">
+    <link rel="stylesheet" href="../Resource/css/style.css">
 </head>
 <body>
 
@@ -68,8 +68,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <script src="resource/js/script.js"></script>
-    <script src="resource/js/gender.js">
+    <script src="../Resource/js/script.js"></script>
+    <script src="../Resource/js/gender.js">
 
     </script>
 

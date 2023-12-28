@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Models/BMICalculator.php';
-require_once 'Controllers/BMICalculatorFactory.php';
-require_once 'Controllers/MetricBMICalculator.php';
+require_once '../Models/BMICalculator.php';
+require_once '../Controllers/BMICalculatorFactory.php';
+require_once '../Controllers/MetricBMICalculator.php';
 
 if (isset($_POST['submit'])){
     $beratBadan = $_POST["beratbadan"];
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])){
     <title>Kalkulator BMI</title>
     <!-- Link Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="resource/css/style.css">
+    <link rel="stylesheet" href="../Resource/css/style.css">
 </head>
 
 <body>
