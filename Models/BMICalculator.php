@@ -1,5 +1,6 @@
 <?php
 
+
 // Produk Abstrak: Kalkulator BMI
 interface BMICalculator
 {

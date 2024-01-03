@@ -1,6 +1,5 @@
 <?php
 
-
 // Kelas AbstractFactoryBMICalculator
 abstract class AbstractFactoryBMICalculator
 {

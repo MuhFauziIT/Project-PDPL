@@ -7,5 +7,6 @@ inputs.forEach((input) => {
     if (value !== null && value.length > 3) {
       input.value = value.substring(0, 3);
     }
+    
   });
 });
