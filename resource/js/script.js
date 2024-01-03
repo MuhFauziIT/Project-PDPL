@@ -9,4 +9,3 @@ inputs.forEach((input) => {
     }
   });
 });
-
