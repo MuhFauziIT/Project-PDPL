@@ -33,7 +33,7 @@ if (isset($_POST['submit'])){
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">BMI</h1>
+            <h1 class="display-4"> <?= (isset($_POST['submit'])) ? "BMI" : "Tidak terdapat inputan!!" ?></h1>
             <h2 class="display-4"><span>
                     <?= (isset($kategori)) ?$kategori : "null" ?>
                 </span></h2>

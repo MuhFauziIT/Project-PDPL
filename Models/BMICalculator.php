@@ -19,3 +19,5 @@ interface BMICalculator
     public function getKategori(): string;
 
 }
+
+

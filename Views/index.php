@@ -40,8 +40,8 @@
                     </div>
                     <div class="form-group">
                         <label for="weight">Berat (kg):</label>
-                        <input type="text" class="form-control" id="weight" placeholder="Masukkan berat Anda"
-                            name="beratbadan" required>
+                        <input type="number" class="form-control" id="weight" placeholder="Masukkan berat Anda"
+                            name="beratbadan" maxlength="3" required>
                     </div>
                     <div class="row">
                         <div class="col-md-6">

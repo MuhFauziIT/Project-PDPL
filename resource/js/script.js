@@ -1,11 +1,12 @@
-const input = document.querySelector("input[type='number']");
+const inputs = document.querySelectorAll("input[type='number']");
 
-input.addEventListener("input", (event) => {
-  const value = event.target.value;
+inputs.forEach((input) => {
+  input.addEventListener("input", (event) => {
+    const value = event.target.value;
 
-  if (value.length > 3) {
-    input.value = value.substring(0, 3);
-  }
+    if (value !== null && value.length > 3) {
+      input.value = value.substring(0, 3);
+    }
+  });
 });
-
 
